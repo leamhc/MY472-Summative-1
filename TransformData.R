@@ -1,8 +1,8 @@
 # Define a function that transforms a dataset
-transform_data <- function(data) {
+transform_data <- function(data, x) {
   
-# Multiply the 'mpg' column by 2
-data[, 1] <- data[, 1] * 2
+# Multiply the 'mpg' column by x instead
+data[, 1] <- data[, 1] * x
   
 # Return the transformed data
   return(data)
@@ -10,7 +10,7 @@ data[, 1] <- data[, 1] * 2
 
 # Load the 'mtcars' dataset and apply the transformation
 data <- mtcars
-transformed_data <- transform_data(data)
+transformed_data <- transform_data(data, 3)
 
 # Print the transformed data
 print(transformed_data)

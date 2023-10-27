@@ -1,0 +1,36 @@
+---
+title: "Demonstration"
+author: "Lea Mok Hiu Ching"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+## Function
+
+This is a function to multiply the first column of a dataset.
+
+```{r}
+transform_data <- function(data, x) {
+data[, 1] <- data[, 1] * x
+  return(data)
+}
+```
+
+## Demonostration
+
+Let's use the built-in database mtcars as an example. 
+This is what the database looks like.
+```{r}
+mtcars
+```
+
+If you use the function on a dataset, setting x to be three. 
+The first column "mpg" will be multiplied by three.
+
+```{r}
+data <- mtcars
+transformed_data <- transform_data(data, 3)
+print(transformed_data)
+
+```
+
